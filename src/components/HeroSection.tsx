@@ -2,16 +2,44 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="hero-section relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20 pb-8 overflow-hidden">
-      {/* Moving background watermark */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none select-none flex items-center">
-        <div className="whitespace-nowrap font-mono text-[20vw] font-black text-primary-foreground/[0.03] leading-none animate-[slide_60s_linear_infinite] px-12">
+    <section className="hero-section relative min-h-screen px-6 md:px-12 pt-6 pb-12 overflow-hidden flex flex-col">
+
+      {/* 1. TOP HEADER ROW (Logo & Nav) */}
+      <div className="relative z-20 flex items-center justify-between w-full mb-4">
+        <div className="font-mono text-2xl font-bold tracking-tighter text-primary-foreground">
+          FORETYX
+        </div>
+
+       
+      </div>
+
+      {/* --- MOVING WATERMARKS --- */}
+
+      {/* TOP SIDE WATERMARK */}
+      <div className="absolute top-20 inset-x-0 overflow-hidden pointer-events-none select-none opacity-[0.03] z-0">
+        <div className="whitespace-nowrap font-mono text-[10vw] font-black text-primary-foreground leading-none animate-[slide_50s_linear_infinite]">
           FORETYX FORETYX FORETYX FORETYX
         </div>
       </div>
 
-      <div className="relative z-10 max-w-4xl">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-[-0.04em] text-primary-foreground mb-10">
+      {/* MIDDLE PART WATERMARK */}
+      <div className="absolute inset-0 flex items-center overflow-hidden pointer-events-none select-none opacity-[0.05] z-0">
+        <div className="whitespace-nowrap font-mono text-[18vw] font-black text-primary-foreground leading-none animate-[slide_60s_linear_infinite_reverse]">
+          FORETYX FORETYX FORETYX FORETYX
+        </div>
+      </div>
+
+      {/* BOTTOM SIDE WATERMARK */}
+      <div className="absolute bottom-10 inset-x-0 overflow-hidden pointer-events-none select-none opacity-[0.03] z-0">
+        <div className="whitespace-nowrap font-mono text-[10vw] font-black text-primary-foreground leading-none animate-[slide_55s_linear_infinite]">
+          FORETYX FORETYX FORETYX FORETYX
+        </div>
+      </div>
+
+      {/* --- MAIN CONTENT --- */}
+      <div className="relative z-10 max-w-4xl mt-8 my-auto">
+        {/* mt-8 pulls the headline close to the logo, my-auto keeps the content vertically balanced */}
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-[-0.04em] text-primary-foreground mb-8">
           On-device AI coding.
           <br />
           No cloud. No limits.
@@ -20,10 +48,7 @@ const HeroSection = () => {
           A complete coding agent that executes entirely on your machine. No API calls. No usage caps.
         </p>
         <div className="flex flex-wrap gap-4 mt-6">
-          <a
-            href="#early-access"
-            className="btn-rig"
-          >
+          <a href="#early-access" className="btn-rig">
             Join Waitlist
           </a>
           <a

@@ -33,27 +33,27 @@ const ProblemSection = () => {
   const problems = [
     {
       num: "001",
-      label: "DATA EXTRACTION",
-      title: "They train on your code.",
-      desc: "Every prompt. Every file. Every fix. It flows through infrastructure you don't control — improving systems they want to use to replace you.",
+      label: "DATA LEAKAGE",
+      title: "They see your secrets.",
+      desc: "Every prompt. Every API key. Every PII. It flows through cloud infrastructure you don’t own—leaving your most sensitive intellectual property exposed to third-party logs.",
     },
     {
       num: "002",
-      label: "ARTIFICIAL SCARCITY",
-      title: "They meter your ambition.",
-      desc: "Slowdowns, overages, caps. Right when you're deep in a sprint, the meter decides you've had enough.",
+      label: "COMPLIANCE GAPS",
+      title: "They bypass your rules.",
+      desc: "Shadow AI, unmonitored prompts, and zero visibility. Just when you need a paper trail for audit, the cloud model hides the \"how\" and \"where\" behind a black box.",
     },
     {
       num: "003",
-      label: "SILENT DOWNGRADES",
-      title: "They change the model.",
-      desc: "They silently downgrade to cheaper models during peak load. Full price, degraded experience.",
+      label: "VULNERABILITY RISKS",
+      title: "They invite the injection.",
+      desc: "Without a local guardrail, malicious prompts and hidden injections reach your core systems. They offer the model; they don't offer the shield. You’re paying for the tool, but bearing the risk.",
     },
     {
       num: "004",
-      label: "CLOUD DEPENDENCY",
-      title: "They control your flow.",
-      desc: "Every completion makes a round trip across the internet. Thousands of tiny interruptions, every single day.",
+      label: "SOVEREIGNTY LOSS",
+      title: "They hold your data hostage.",
+      desc: "Every interaction makes a round trip across the open web. You lose the \"Right to Erasure\" the moment the packet leaves your network. Your security shouldn't depend on a cloud provider's promise.",
     },
   ];
 
@@ -65,7 +65,7 @@ const ProblemSection = () => {
       <div className="max-w-[1400px] mx-auto relative z-10">
         {/* Section Label */}
         <div className="flex justify-center mb-16">
-          <div className="flex items-center gap-3 px-4 py-1.5 border border-white/10 bg-white/5 uppercase tracking-[0.3em] font-mono text-[9px] text-[#ED462D]">
+          <div className="flex items-center gap-3 px-4 py-1.5 border border-white/10 bg-white/5 uppercase tracking-[0.3em] font-mono text-[9px] text-[#ADE1ED]">
             <span className="text-white/20">✕</span> The Problem
           </div>
         </div>
@@ -118,7 +118,7 @@ const ProblemSection = () => {
                         cx={240 + mousePos.x * 2} 
                         cy={240 + mousePos.y * 2} 
                         r="14" 
-                        fill="#ED462D" 
+                        fill="#ADE1ED" 
                     >
                         <animate 
                           attributeName="opacity" 
@@ -132,7 +132,7 @@ const ProblemSection = () => {
                     <line 
                         x1="240" y1="240" 
                         x2="480" y2="240" 
-                        stroke="#ED462D" 
+                        stroke="#ADE1ED" 
                         strokeWidth="0.5" 
                         className="animate-[spin_4s_linear_infinite] origin-center opacity-30"
                     />
@@ -150,14 +150,14 @@ const ProblemSection = () => {
                     ${idx % 2 === 0 ? 'md:border-r' : ''}`}
               >
                 <div className="flex justify-between items-center mb-8">
-                  <span className="font-mono text-[9px] font-bold tracking-[0.25em] text-[#ED462D] uppercase">
+                  <span className="font-mono text-[9px] font-bold tracking-[0.25em] text-[#ADE1ED] uppercase">
                     {p.label}
                   </span>
                   <span className="font-mono text-[9px] text-white/20 font-medium">
                     {p.num}
                   </span>
                 </div>
-                <h3 className="text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-6 leading-[1.2] tracking-tight group-hover:text-[#ED462D] transition-colors">
+                <h3 className="text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-6 leading-[1.2] tracking-tight group-hover:text-[#ADE1ED] transition-colors">
                   {p.title}
                 </h3>
                 <p className="text-sm md:text-base text-white/50 font-sans leading-relaxed opacity-70">
