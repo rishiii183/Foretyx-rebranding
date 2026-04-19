@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 import ComparisonSection from "@/components/ComparisonSection";
 import UseCasesSection from "@/components/UseCasesSection";
 import ComplianceSection from "@/components/ComplianceSection";
-import TeamSection from "@/components/TeamSection";
+import TeamButtonSection from "@/components/TeamButtonSection";
 
 const Index = () => {
   return (
@@ -31,7 +31,7 @@ const Index = () => {
       <CapabilitiesSection />
       <UseCasesSection />
       <ComplianceSection />
-      <TeamSection />
+      <TeamButtonSection />
       <TerminalSection />
       <FaqSection />
       <CtaSection />

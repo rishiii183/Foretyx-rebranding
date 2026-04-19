@@ -24,7 +24,7 @@ const CtaSection = () => {
           Your data governance isn't keeping up.
         </h2>
         <p className="text-muted-foreground font-sans text-lg max-w-xl mx-auto mb-12">
-          Join the early access programme and be among the first enterprises to deploy Foretyx — before your next compliance audit asks where your prompts went.
+          Join the early access programme and be among the first enterprises to deploy Foretyx before your next compliance audit asks where your prompts went.
         </p>
 
         {!submitted ? (

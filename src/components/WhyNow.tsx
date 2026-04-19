@@ -31,19 +31,20 @@ const WhyNow = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 items-stretch">
           {stats.map((item, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm group hover:border-white/10 transition-all"
+              className={`p-8 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm transition-all duration-500 group relative
+                hover:scale-[1.05] hover:bg-white/[0.08] hover:border-[#ADE1ED]/50 hover:shadow-[0_0_50px_rgba(173,225,237,0.1)] hover:z-20 z-10`}
             >
-              <div className="font-mono text-5xl font-black text-[#ADE1ED] mb-6 group-hover:scale-110 transition-transform origin-left">
+              <div className="font-mono text-5xl font-black text-[#ADE1ED] mb-6 transition-transform origin-left">
                 {item.stat}
               </div>
               <h3 className="text-xl font-bold text-white mb-4 leading-tight">
                 {item.title}
               </h3>
-              <p className="text-white/50 text-sm leading-relaxed font-sans">
+              <p className="text-white/50 text-sm leading-relaxed font-sans group-hover:text-white/70 transition-colors">
                 {item.body}
               </p>
             </div>
@@ -52,7 +53,7 @@ const WhyNow = () => {
 
         <div className="text-center">
           <p className="text-white/30 text-xs font-mono uppercase tracking-[0.2em] max-w-xl mx-auto leading-relaxed">
-            Foretyx is the compliance layer enterprises are scrambling to build themselves — and failing to.
+            Foretyx is the compliance layer enterprises are scrambling to build themselves  and failing to.
           </p>
         </div>
       </div>

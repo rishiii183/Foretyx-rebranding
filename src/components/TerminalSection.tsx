@@ -30,18 +30,20 @@ const TerminalSection = () => {
             <div className="p-6 font-mono text-sm space-y-2">
               <p className="text-primary">λ foretyx init</p>
               <pre className="text-foreground/80 text-[10px] sm:text-xs leading-[0.9] mb-4">
-{`███████╗ ██████╗ ██████╗ ███████╗████████╗██╗   ██╗██╗  ██╗
+                {`███████╗ ██████╗ ██████╗ ███████╗████████╗██╗   ██╗██╗  ██╗
 ██╔════╝██╔═══██╗██╔══██╗██╔════╝╚══██╔══╝╚██╗ ██╔╝╚██╗██╔╝
 █████╗  ██║   ██║██████╔╝█████╗     ██║    ╚████╔╝  ╚███╔╝ 
 ██╔══╝  ██║   ██║██╔══██╗██╔══╝     ██║     ╚██╔╝   ██╔██╗ 
 ██║     ╚██████╔╝██║  ██║███████╗   ██║      ██║   ██╔╝ ██╗
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚══════╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝`}
               </pre>
-              <p className="text-muted-foreground">&gt; Scanning hardware...</p>
-              <p className="text-muted-foreground">&gt; Found M4 · 16GB RAM</p>
-              <p className="text-muted-foreground">&gt; Loading FORETYX Model <span className="text-success">OK</span></p>
-              <p className="text-muted-foreground">&gt; Indexing 2,418 files · 87,102 symbols</p>
-              <p className="text-success mt-4">✓ Ready. Network: OFF · Telemetry: OFF</p>
+              <p className="text-muted-foreground">&gt; Scanning Environment... <span className="text-success">OK</span></p>
+              <p className="text-muted-foreground">&gt; Core: FORETYX Intelligence Engine</p>
+              <p className="text-muted-foreground">&gt; Indexing Project: 87,102 symbols indexed</p>
+              <p className="text-muted-foreground">&gt; Detection Heuristics: Prompt Injection [ON], Data Leak [OFF]</p>
+              <p className="text-muted-foreground">&gt; Entropy Check: Normal levels detected</p>
+              <p className="text-muted-foreground">&gt; Gateway: LOCALHOST:8080 (Secured)</p>
+              <p className="text-success mt-4">✓ Foretyx is guarding your LLM.</p>
               <p className="text-primary mt-2">λ <span className="animate-pulse-glow">_</span></p>
             </div>
           </div>
