@@ -33,11 +33,18 @@ const TeamButtonSection = () => {
         <div className="flex flex-wrap justify-center gap-6 mb-12">
           {teamPreview.map((member, idx) => (
             <div key={idx} className="flex flex-col items-center gap-3 group">
-              <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-[#ADE1ED]/30 transition-all duration-500">
+              <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 overflow-hidden group-hover:border-[#ADE1ED]/50 transition-all duration-500 group-hover:shadow-[0_0_15px_rgba(173,225,237,0.15)] relative aspect-square [transform:translateZ(0)] [antialiased]">
+                {/* Base Layer - Static dimmed version */}
+                <img 
+                  src={member.image} 
+                  alt=""
+                  className="block mx-auto w-full h-full object-cover opacity-40 [image-rendering:-webkit-optimize-contrast] [image-rendering:crisp-edges] [shape-rendering:crispEdges] [backface-visibility:hidden] [transform:translateZ(0)]"
+                />
+                {/* Top Layer (Color) - Fade only */}
                 <img 
                   src={member.image} 
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 block mx-auto w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out [will-change:opacity] [image-rendering:-webkit-optimize-contrast] [image-rendering:crisp-edges] [shape-rendering:crispEdges] [backface-visibility:hidden] [transform:translateZ(0)]"
                 />
               </div>
               <span className="text-[9px] font-mono text-white/40 uppercase tracking-widest group-hover:text-white transition-colors">{member.name}</span>

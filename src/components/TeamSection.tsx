@@ -56,7 +56,7 @@ const TeamSection = () => {
           <span className="font-mono text-[10px] tracking-[0.3em] text-[#ADE1ED] uppercase mb-4 block">
             The Team
           </span>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white mb-6 leading-[0.95]">
             Built by engineers who
             <br />
             <span className="text-white/40">got tired of watching data leak.</span>
@@ -66,11 +66,18 @@ const TeamSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {teamMembers.map((member, idx) => (
             <div key={idx} className="flex flex-col items-center text-center group">
-              <div className="w-24 h-24 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 overflow-hidden group-hover:border-[#ADE1ED]/30 transition-all duration-500">
+              <div className="w-40 h-40 rounded-full bg-white/5 border border-white/10 mb-6 overflow-hidden group-hover:border-[#ADE1ED]/50 transition-all duration-500 group-hover:shadow-[0_0_20px_rgba(173,225,237,0.15)] relative aspect-square [transform:translateZ(0)] [antialiased]">
+                {/* Base Layer - No grayscale math, just a dimmed version for transition contrast */}
+                <img
+                  src={member.image}
+                  alt=""
+                  className="block mx-auto w-full h-full object-cover opacity-40 [image-rendering:-webkit-optimize-contrast] [image-rendering:crisp-edges] [shape-rendering:crispEdges] [backface-visibility:hidden] [transform:translateZ(0)]"
+                />
+                {/* Top Layer (Color) - Fade only */}
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 block mx-auto w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out [will-change:opacity] [image-rendering:-webkit-optimize-contrast] [image-rendering:crisp-edges] [shape-rendering:crispEdges] [backface-visibility:hidden] [transform:translateZ(0)]"
                 />
               </div>
               <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[#ADE1ED] transition-colors">{member.name}</h3>

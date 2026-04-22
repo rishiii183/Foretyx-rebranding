@@ -5,8 +5,11 @@ const HeroSection = () => {
     <section id="hero" className="hero-section relative min-h-screen px-6 md:px-12 pt-6 pb-12 overflow-hidden flex flex-col">
       {/* Logo moved here to scroll away naturally */}
       <div className="py-4">
-        <a href="/" className="font-mono text-2xl font-bold tracking-tighter text-primary-foreground">
-          FORETYX
+        <a href="/" className="flex items-center gap-3 group">
+          <img src="/logo.png" alt="Foretyx Logo" className="w-8 h-8 object-contain" />
+          <span className="font-mono text-2xl font-bold tracking-tighter text-primary-foreground">
+            FORETYX
+          </span>
         </a>
       </div>
       {/* --- BACKGROUND TEXT --- */}
