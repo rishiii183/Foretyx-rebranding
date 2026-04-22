@@ -27,6 +27,7 @@ const Navbar = () => {
       {isTeamPage ? (
         <Link 
           to="/#team-preview" 
+          aria-label="Navigate back to the homepage overview"
           className="inline-flex items-center gap-2 text-white/60 hover:text-[#ADE1ED] transition-colors font-mono text-[10px] uppercase tracking-widest"
         >
           <ArrowLeft className="w-3 h-3" />
@@ -53,7 +54,7 @@ const Navbar = () => {
             </a>
           </>
         )}
-        <a href="#early-access" className="btn-early-access">
+        <a href="#early-access" aria-label="Request early access to Foretyx" className="btn-early-access">
           <span className="btn-icon-wrapper">
             <svg
               width="10"

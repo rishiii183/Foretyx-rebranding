@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import MarqueeTicker from "@/components/MarqueeTicker";
@@ -19,6 +20,11 @@ import TeamButtonSection from "@/components/TeamButtonSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Foretyx | Enterprise AI Security Gateway</title>
+        <meta name="description" content="Foretyx intercepts employee AI prompts before they reach any external LLM — scrubbing PII, blocking injections, and enforcing policy entirely on your infrastructure. Built for DPDP, GDPR, and HIPAA." />
+        <link rel="canonical" href="https://foretyx.in/" />
+      </Helmet>
       <Navbar />
       <HeroSection />
       <MarqueeTicker />

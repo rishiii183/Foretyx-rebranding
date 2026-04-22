@@ -71,12 +71,14 @@ const TeamSection = () => {
                 <img
                   src={member.image}
                   alt=""
+                  loading="lazy"
                   className="block mx-auto w-full h-full object-cover opacity-40 [image-rendering:-webkit-optimize-contrast] [image-rendering:crisp-edges] [shape-rendering:crispEdges] [backface-visibility:hidden] [transform:translateZ(0)]"
                 />
                 {/* Top Layer (Color) - Fade only */}
                 <img
                   src={member.image}
                   alt={member.name}
+                  loading="lazy"
                   className="absolute inset-0 block mx-auto w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out [will-change:opacity] [image-rendering:-webkit-optimize-contrast] [image-rendering:crisp-edges] [shape-rendering:crispEdges] [backface-visibility:hidden] [transform:translateZ(0)]"
                 />
               </div>
